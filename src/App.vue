@@ -1,15 +1,15 @@
 <script setup lang="ts">
-	import SideBar from './components/sideBar.vue'
-	import Form from './components/form.vue'
+	import MeSideBar from './components/MeSideBar.vue'
+	import MeForm from './components/MeForm.vue'
 </script>
 
 <template>
 	<main class="columns is-gapless is-multiline">
 		<div class="column is-one-quarter">
-			<sideBar />
+			<MeSideBar />
 		</div>
 		<div class="column is-three-quarter">
-			<Form />
+			<MeForm />
 		</div>
 	</main>
 </template>
