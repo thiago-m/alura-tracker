@@ -15,6 +15,12 @@
 
 <template>
 	<section class="mr-2">
-		<strong>{{formatTime}}</strong>
+		<strong class="display">{{formatTime}}</strong>
 	</section>
 </template>
+
+<style>
+.display {
+	color: var(--texto-pripario);
+}
+</style>

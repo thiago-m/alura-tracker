@@ -16,7 +16,7 @@ const taskEnd = (timeSeconds: number): void => {
 </script>
 
 <template>
-	<div class="box">
+	<div class="box formulario">
 		<div class="columns">
 			<div class="column is-8" role="form" aria-label="Formulário para criação de uma nova tarefa">
 				<input type="text" v-model="description" class="input" placeholder="Qual tarefa você deseja iniciar?">
@@ -29,4 +29,9 @@ const taskEnd = (timeSeconds: number): void => {
 </template>
 
 <style>
+.formulario {
+	color: var(--texto-pripario);
+	background-color: var(--bg-primario);
+
+}
 </style>
