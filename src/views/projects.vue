@@ -1,16 +1,16 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
 import IProject from '../interfaces/IProject'
+import { useStore } from '../store'
+
+const store = useStore()
 
 const projectName = ref<string>('')
-const projects = ref<IProject[]>([])
+
+const projects = computed(() => store.state.projects)
 
 const salve = (): void => {
-	const project: IProject = {
-		name: projectName.value,
-		id: new Date().toISOString()
-	}
-	projects.value.push(project)
+	store.commit('addProject', projectName.value)
 	projectName.value = ''
 }
 </script>
